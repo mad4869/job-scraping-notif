@@ -169,7 +169,6 @@ class JobstreetSpider(scrapy.Spider):
         job_item["type"] = job_details.get("workTypes", {}).get("label", "")
         job_item["requirement"] = job_details.get("content")
         job_item["salary"] = job_details.get("salary", {}).get("label", "")
-        job_item["currency"] = "IDR"
         job_item["source"] = self.name
         job_item["url"] = f"https://id.jobstreet.com/id/job/{job_id}"
 
